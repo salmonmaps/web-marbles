@@ -8,7 +8,8 @@ import { Vector3 } from "three";
 import * as msgPack from "msgpack-lite";
 
 let networking = function() {
-	let _wsUri = `ws${config.ssl ? "s" : ""}://${window.location.hostname}${config.websockets.localReroute ? "" : `:${config.websockets.port}`}/ws/gameplay`;
+    let localReroute = 'https:' == document.location.protocol || config.websockets.localReroute;
+	let _wsUri = `ws${'https:' == document.location.protocol ? "s" : ""}://${window.location.hostname}${localReroute ? "" : `:${config.websockets.port}`}/ws/gameplay`;
 	let _ws = null;
 
 	let _updateBuffer = []; // Array of game updates, each containing events and marble data

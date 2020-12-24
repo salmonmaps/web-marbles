@@ -58,7 +58,4 @@ for(let key in userConfig) {
 	}
 }
 
-if (process.env.NETWORK_SSL)  config.network.ssl = process.env.NETWORK_SSL == 'true';
-if (process.env.NETWORK_WS_LOCAL_REROUTE)  config.network.websockets.localReroute = process.env.NETWORK_WS_LOCAL_REROUTE == 'true';
-
 module.exports = config;
