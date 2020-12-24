@@ -150,5 +150,6 @@ if (process.env.DISCORD_BOT_TOKEN)				config.discord.botToken				= process.env.D
 if (process.env.DISCORD_GAMEPLAY_CHANNEL_ID)	config.discord.gameplayChannelId	= process.env.DISCORD_GAMEPLAY_CHANNEL_ID;
 if (process.env.DISCORD_WEBHOOK_ID)				config.discord.webhookId			= process.env.DISCORD_WEBHOOK_ID;
 if (process.env.DISCORD_WEBHOOK_TOKEN)			config.discord.webhookToken			= process.env.DISCORD_WEBHOOK_TOKEN;
+if (process.env.DISCORD_ENABLED)			    config.discord.enabled			    = process.env.DISCORD_ENABLED == 'true';
 
 module.exports = config;

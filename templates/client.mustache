@@ -86,12 +86,15 @@
 				{{/discordEnabled}}
 				{{^discordEnabled}}
 				<script src="dist/debug.js"></script>
+				{{#debugAdmin}}
 				<div id="chat">
 					Amount: <input type="number" id="debugAmount"/>
+					Name: <input type="text" id="debugName"/>
 					<br/><button id="debugAdd">Add marble</button>
 					<br/><button id="debugStart">Start race</button>
 					<br/><button id="debugEnd">End race</button>
 				</div>
+				{{/debugAdmin}}
 				{{/discordEnabled}}
 
 				<div id="notifications">

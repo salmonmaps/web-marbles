@@ -73,6 +73,7 @@ app.get("/client", function(req, res) {
 		gitHash,
 		version,
 		discordEnabled: config.discord.enabled,
+		debugAdmin: req.query ? req.query.debug == 'true' : false,
 		invitelink: config.discord.inviteLink,
 		rootUrl: config.network.rootUrl
 	});
